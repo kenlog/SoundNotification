@@ -25,7 +25,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return 'Receive sound alerts';
+        return 'Each new notification will sound an alert sound.';
     }
 
     public function getPluginAuthor()
