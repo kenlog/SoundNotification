@@ -25,8 +25,8 @@ class SoundNotificationController extends \Kanboard\Controller\WebNotificationCo
             if($timestamp > strtotime("-10 seconds")) {
                 $this->response->html(
                     '<audio controls autoplay style="display: none!important;">
-                        <source src="plugins/SoundNotification/Assets/Audio/sound-notification-2.ogg" type="audio/ogg">
-                        <source src="plugins/SoundNotification/Assets/Audio/sound-notification-2.mp3" type="audio/mpeg">
+                        <source src="'.$this->helper->url->dir().'plugins/SoundNotification/Assets/Audio/sound-notification-2.mp3" type="audio/mpeg">
+                        <source src="'.$this->helper->url->dir().'plugins/SoundNotification/Assets/Audio/sound-notification-2.ogg" type="audio/ogg">
                     </audio>'
                 );
             }
