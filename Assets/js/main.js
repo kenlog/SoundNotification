@@ -1,4 +1,5 @@
-var baseUrl = window.location.protocol + "//" + window.location.host + "/";
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 
 function soundalert()
 {
