@@ -10,7 +10,7 @@ function soundalert()
        success: function(response)
         {
             if (response != "") {
-                $("#soundalert").hide().html(response);
+                $("#soundalert").html(response);
             }
         }
    });
