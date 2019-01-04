@@ -1,3 +1,10 @@
+/*
+ * Sound notification for kanboard
+ * Licensed under the MIT license - SoundNotification/LICENSE
+ * https://github.com/kenlog/SoundNotification
+ * Copyright (c) 2018 Valentino Pesce - https://iltuobrand.it
+ */
+
 var getUrl = window.location;
 var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 
