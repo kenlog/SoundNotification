@@ -14,6 +14,7 @@ class Plugin extends Base
 {
     public function initialize()
     {
+        $this->hook->on("template:layout:css", array("template" => "plugins/SoundNotification/Assets/css/style.css"));
         $this->hook->on('template:layout:js', array('template' => 'plugins/SoundNotification/Assets/js/main.js'));
         $this->template->setTemplateOverride('header/user_notifications', 'SoundNotification:header/user_notifications');
     }
