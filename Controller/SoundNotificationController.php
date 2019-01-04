@@ -13,10 +13,10 @@ class SoundNotificationController extends \Kanboard\Controller\WebNotificationCo
 
     public function soundNotifications()
     {
-        $user = $this->userSession->getId();
+        $user = $this->getUser();
 
-        if ($this->userUnreadNotificationModel->hasNotifications($user)) {
-            $notifications = $this->userUnreadNotificationModel->getAll($user);
+        if ($this->userUnreadNotificationModel->hasNotifications($user['id'])) {
+            $notifications = $this->userUnreadNotificationModel->getAll($user['id']);
 
             foreach ($notifications as $value) {
                 $timestamp = $value['date_creation'];
@@ -30,6 +30,9 @@ class SoundNotificationController extends \Kanboard\Controller\WebNotificationCo
                     </audio>'
                 );
             }
+
+            $this->response->html(count($notifications));
+
         }
     }
 }
