@@ -6,23 +6,22 @@
  */
 
 var getUrl = window.location;
-var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 
-function soundalert()
-{
+function soundalert() {
     $.ajax({
-       type: "GET",
-       url: baseUrl+"?controller=SoundNotificationController&action=soundNotifications&plugin=SoundNotification",
-       cache: false,
-       success: function(response)
-        {
+        type: "GET",
+        url: baseUrl + "?controller=SoundNotificationController&action=soundNotifications&plugin=SoundNotification",
+        cache: false,
+        success: function (response) {
             if (response != "") {
                 $("#soundalert").html(response);
+                setTimeout(function () {
+                    soundalert();
+                }, 5000);
             }
         }
-   });
+    });
 }
 
-soundalert(); 
-
-setInterval(soundalert, 5000);
+soundalert();
