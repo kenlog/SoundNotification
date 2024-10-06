@@ -1,3 +1,8 @@
+## Checkout our latest project
+
+- [Global Search Plugin for Kanboard](https://github.com/kenlog/global-search-kanboard.git) 
+-----------
+
 [![Latest release](https://img.shields.io/github/release/kenlog/SoundNotification.svg)](https://github.com/kenlog/SoundNotification/releases)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/kenlog/SoundNotification/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kenlog/SoundNotification/graphs/contributors)
